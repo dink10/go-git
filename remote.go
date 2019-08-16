@@ -7,6 +7,7 @@ import (
 	"io"
 
 	"gopkg.in/src-d/go-billy.v4/osfs"
+
 	"gopkg.in/src-d/go-git.v4/config"
 	"gopkg.in/src-d/go-git.v4/plumbing"
 	"gopkg.in/src-d/go-git.v4/plumbing/cache"
@@ -521,7 +522,7 @@ func (r *Remote) addReferenceIfRefSpecMatches(rs config.RefSpec,
 	remoteRef, err := remoteRefs.Reference(cmd.Name)
 	if err == nil {
 		if remoteRef.Type() != plumbing.HashReference {
-			//TODO: check actual git behavior here
+			// TODO: check actual git behavior here
 			return nil
 		}
 
@@ -657,7 +658,10 @@ func getHaves(
 		}
 
 		err = getHavesFromRef(ref, remoteRefs, s, haves)
-		if err != nil {
+		// Take care of the edge case where iterating using Preorder over
+		// commits produces an `object not found` error, if using a shallow
+		// clone with incomplete history.
+		if err != nil && err != plumbing.ErrObjectNotFound {
 			return nil, err
 		}
 	}
