@@ -3,7 +3,7 @@ package packp
 import (
 	"bytes"
 
-	"gopkg.in/src-d/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/plumbing"
 
 	. "gopkg.in/check.v1"
 )

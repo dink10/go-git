@@ -3,10 +3,10 @@ package packfile
 import (
 	"io"
 
-	billy "gopkg.in/src-d/go-billy.v4"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/cache"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/idxfile"
+	billy "github.com/dink10/go-billy.v4"
+	"github.com/dink10/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/plumbing/cache"
+	"github.com/dink10/go-git.v4/plumbing/format/idxfile"
 )
 
 // FSObject is an object from the packfile on the filesystem.

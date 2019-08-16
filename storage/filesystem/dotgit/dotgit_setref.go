@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/utils/ioutil"
+	"github.com/dink10/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/utils/ioutil"
 
-	"gopkg.in/src-d/go-billy.v4"
+	"github.com/dink10/go-billy.v4"
 )
 
 func (d *DotGit) setRef(fileName, content string, old *plumbing.Reference) (err error) {

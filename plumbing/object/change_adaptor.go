@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"gopkg.in/src-d/go-git.v4/utils/merkletrie"
-	"gopkg.in/src-d/go-git.v4/utils/merkletrie/noder"
+	"github.com/dink10/go-git.v4/utils/merkletrie"
+	"github.com/dink10/go-git.v4/utils/merkletrie/noder"
 )
 
 // The following functions transform changes types form the merkletrie

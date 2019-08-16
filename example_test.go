@@ -8,13 +8,13 @@ import (
 	"os"
 	"path/filepath"
 
-	"gopkg.in/src-d/go-git.v4"
-	"gopkg.in/src-d/go-git.v4/config"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport/http"
-	"gopkg.in/src-d/go-git.v4/storage/memory"
+	"github.com/dink10/go-git.v4"
+	"github.com/dink10/go-git.v4/config"
+	"github.com/dink10/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/plumbing/transport/http"
+	"github.com/dink10/go-git.v4/storage/memory"
 
-	"gopkg.in/src-d/go-billy.v4/memfs"
+	"github.com/dink10/go-billy.v4/memfs"
 )
 
 func ExampleClone() {

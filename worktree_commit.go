@@ -6,14 +6,14 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/dink10/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/plumbing/filemode"
+	"github.com/dink10/go-git.v4/plumbing/format/index"
+	"github.com/dink10/go-git.v4/plumbing/object"
+	"github.com/dink10/go-git.v4/storage"
 	"golang.org/x/crypto/openpgp"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/filemode"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/index"
-	"gopkg.in/src-d/go-git.v4/plumbing/object"
-	"gopkg.in/src-d/go-git.v4/storage"
 
-	"gopkg.in/src-d/go-billy.v4"
+	"github.com/dink10/go-billy.v4"
 )
 
 // Commit stores the current contents of the index in a new commit along with

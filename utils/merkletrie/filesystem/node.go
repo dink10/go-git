@@ -5,11 +5,11 @@ import (
 	"os"
 	"path"
 
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/filemode"
-	"gopkg.in/src-d/go-git.v4/utils/merkletrie/noder"
+	"github.com/dink10/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/plumbing/filemode"
+	"github.com/dink10/go-git.v4/utils/merkletrie/noder"
 
-	"gopkg.in/src-d/go-billy.v4"
+	"github.com/dink10/go-billy.v4"
 )
 
 var ignore = map[string]bool{

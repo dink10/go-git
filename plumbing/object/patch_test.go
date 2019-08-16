@@ -1,11 +1,11 @@
 package object
 
 import (
+	fixtures "github.com/dink10/go-git-fixtures.v3"
+	"github.com/dink10/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/plumbing/cache"
+	"github.com/dink10/go-git.v4/storage/filesystem"
 	. "gopkg.in/check.v1"
-	fixtures "gopkg.in/src-d/go-git-fixtures.v3"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/cache"
-	"gopkg.in/src-d/go-git.v4/storage/filesystem"
 )
 
 type PatchSuite struct {

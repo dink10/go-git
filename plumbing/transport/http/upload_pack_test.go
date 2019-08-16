@@ -6,13 +6,13 @@ import (
 	"os"
 	"path/filepath"
 
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport/test"
+	"github.com/dink10/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/plumbing/protocol/packp"
+	"github.com/dink10/go-git.v4/plumbing/transport"
+	"github.com/dink10/go-git.v4/plumbing/transport/test"
 
+	"github.com/dink10/go-git-fixtures.v3"
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-git-fixtures.v3"
 )
 
 type UploadPackSuite struct {

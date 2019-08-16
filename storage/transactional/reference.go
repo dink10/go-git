@@ -1,9 +1,9 @@
 package transactional
 
 import (
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
-	"gopkg.in/src-d/go-git.v4/storage"
+	"github.com/dink10/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/plumbing/storer"
+	"github.com/dink10/go-git.v4/storage"
 )
 
 // ReferenceStorage implements the storer.ReferenceStorage for the transactional package.

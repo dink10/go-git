@@ -14,19 +14,19 @@ import (
 
 	"golang.org/x/crypto/openpgp"
 
-	"gopkg.in/src-d/go-git.v4/config"
-	"gopkg.in/src-d/go-git.v4/internal/revision"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/cache"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/packfile"
-	"gopkg.in/src-d/go-git.v4/plumbing/object"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
-	"gopkg.in/src-d/go-git.v4/storage"
-	"gopkg.in/src-d/go-git.v4/storage/filesystem"
-	"gopkg.in/src-d/go-git.v4/utils/ioutil"
+	"github.com/dink10/go-git.v4/config"
+	"github.com/dink10/go-git.v4/internal/revision"
+	"github.com/dink10/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/plumbing/cache"
+	"github.com/dink10/go-git.v4/plumbing/format/packfile"
+	"github.com/dink10/go-git.v4/plumbing/object"
+	"github.com/dink10/go-git.v4/plumbing/storer"
+	"github.com/dink10/go-git.v4/storage"
+	"github.com/dink10/go-git.v4/storage/filesystem"
+	"github.com/dink10/go-git.v4/utils/ioutil"
 
-	"gopkg.in/src-d/go-billy.v4"
-	"gopkg.in/src-d/go-billy.v4/osfs"
+	"github.com/dink10/go-billy.v4"
+	"github.com/dink10/go-billy.v4/osfs"
 )
 
 // GitDirName this is a special folder where all the git stuff is.

@@ -15,12 +15,12 @@ import (
 	"strings"
 	"time"
 
-	"gopkg.in/src-d/go-git.v4/plumbing/format/pktline"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp/capability"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp/sideband"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport"
-	"gopkg.in/src-d/go-git.v4/utils/ioutil"
+	"github.com/dink10/go-git.v4/plumbing/format/pktline"
+	"github.com/dink10/go-git.v4/plumbing/protocol/packp"
+	"github.com/dink10/go-git.v4/plumbing/protocol/packp/capability"
+	"github.com/dink10/go-git.v4/plumbing/protocol/packp/sideband"
+	"github.com/dink10/go-git.v4/plumbing/transport"
+	"github.com/dink10/go-git.v4/utils/ioutil"
 )
 
 const (

@@ -3,15 +3,15 @@ package transactional
 import (
 	"testing"
 
+	"github.com/dink10/go-billy.v4/memfs"
+	"github.com/dink10/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/plumbing/cache"
+	"github.com/dink10/go-git.v4/plumbing/storer"
+	"github.com/dink10/go-git.v4/storage"
+	"github.com/dink10/go-git.v4/storage/filesystem"
+	"github.com/dink10/go-git.v4/storage/memory"
+	"github.com/dink10/go-git.v4/storage/test"
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-billy.v4/memfs"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/cache"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
-	"gopkg.in/src-d/go-git.v4/storage"
-	"gopkg.in/src-d/go-git.v4/storage/filesystem"
-	"gopkg.in/src-d/go-git.v4/storage/memory"
-	"gopkg.in/src-d/go-git.v4/storage/test"
 )
 
 func Test(t *testing.T) { TestingT(t) }

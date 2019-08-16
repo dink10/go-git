@@ -9,19 +9,19 @@ import (
 	"runtime"
 	"time"
 
-	"gopkg.in/src-d/go-git.v4/config"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/cache"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp/capability"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
-	"gopkg.in/src-d/go-git.v4/storage"
-	"gopkg.in/src-d/go-git.v4/storage/filesystem"
-	"gopkg.in/src-d/go-git.v4/storage/memory"
+	"github.com/dink10/go-git.v4/config"
+	"github.com/dink10/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/plumbing/cache"
+	"github.com/dink10/go-git.v4/plumbing/protocol/packp"
+	"github.com/dink10/go-git.v4/plumbing/protocol/packp/capability"
+	"github.com/dink10/go-git.v4/plumbing/storer"
+	"github.com/dink10/go-git.v4/storage"
+	"github.com/dink10/go-git.v4/storage/filesystem"
+	"github.com/dink10/go-git.v4/storage/memory"
 
+	"github.com/dink10/go-billy.v4/osfs"
+	fixtures "github.com/dink10/go-git-fixtures.v3"
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-billy.v4/osfs"
-	fixtures "gopkg.in/src-d/go-git-fixtures.v3"
 )
 
 type RemoteSuite struct {

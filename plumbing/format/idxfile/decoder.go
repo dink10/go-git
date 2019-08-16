@@ -6,7 +6,7 @@ import (
 	"errors"
 	"io"
 
-	"gopkg.in/src-d/go-git.v4/utils/binary"
+	"github.com/dink10/go-git.v4/utils/binary"
 )
 
 var (

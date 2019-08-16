@@ -1,7 +1,7 @@
 package packfile
 
 import (
-	"gopkg.in/src-d/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/plumbing"
 )
 
 // ObjectToPack is a representation of an object that is going to be into a

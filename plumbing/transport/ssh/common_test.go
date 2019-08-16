@@ -7,8 +7,8 @@ import (
 
 	"golang.org/x/crypto/ssh"
 
+	"github.com/dink10/go-git.v4/plumbing/transport"
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport"
 )
 
 func Test(t *testing.T) { TestingT(t) }

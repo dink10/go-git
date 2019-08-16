@@ -7,12 +7,12 @@ import (
 	"path"
 	"testing"
 
+	"github.com/dink10/go-billy.v4"
+	"github.com/dink10/go-billy.v4/memfs"
+	"github.com/dink10/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/utils/merkletrie"
+	"github.com/dink10/go-git.v4/utils/merkletrie/noder"
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-billy.v4"
-	"gopkg.in/src-d/go-billy.v4/memfs"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/utils/merkletrie"
-	"gopkg.in/src-d/go-git.v4/utils/merkletrie/noder"
 )
 
 func Test(t *testing.T) { TestingT(t) }

@@ -7,7 +7,7 @@ import (
 	"sort"
 	"strings"
 
-	"gopkg.in/src-d/go-git.v4/utils/merkletrie/noder"
+	"github.com/dink10/go-git.v4/utils/merkletrie/noder"
 )
 
 // Dir values implement directory-like noders.

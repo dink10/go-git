@@ -12,20 +12,20 @@ import (
 	"testing"
 	"time"
 
-	"gopkg.in/src-d/go-git.v4/config"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/filemode"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/gitignore"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/index"
-	"gopkg.in/src-d/go-git.v4/plumbing/object"
-	"gopkg.in/src-d/go-git.v4/storage/memory"
+	"github.com/dink10/go-git.v4/config"
+	"github.com/dink10/go-git.v4/plumbing"
+	"github.com/dink10/go-git.v4/plumbing/filemode"
+	"github.com/dink10/go-git.v4/plumbing/format/gitignore"
+	"github.com/dink10/go-git.v4/plumbing/format/index"
+	"github.com/dink10/go-git.v4/plumbing/object"
+	"github.com/dink10/go-git.v4/storage/memory"
 
+	"github.com/dink10/go-billy.v4/memfs"
+	"github.com/dink10/go-billy.v4/osfs"
+	"github.com/dink10/go-billy.v4/util"
+	"github.com/dink10/go-git-fixtures.v3"
 	"golang.org/x/text/unicode/norm"
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-billy.v4/memfs"
-	"gopkg.in/src-d/go-billy.v4/osfs"
-	"gopkg.in/src-d/go-billy.v4/util"
-	"gopkg.in/src-d/go-git-fixtures.v3"
 )
 
 type WorktreeSuite struct {

@@ -4,8 +4,8 @@ import (
 	"encoding/base64"
 	"testing"
 
+	"github.com/dink10/go-git.v4/plumbing"
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-git.v4/plumbing"
 )
 
 type objfileFixture struct {
@@ -49,7 +49,7 @@ var objfileFixtures = []objfileFixture{
 	{
 		"bb2b40e85ec0455d1de72daff71583f0dd72a33f",
 		plumbing.BlobObject,
-		base64.StdEncoding.EncodeToString([]byte("package main\r\n\r\nimport (\r\n\t\"fmt\"\r\n\t\"io\"\r\n\t\"os\"\r\n\r\n\t\"gopkg.in/src-d/go-git.v3\"\r\n)\r\n\r\nfunc main() {\r\n\tfmt.Printf(\"Retrieving %q ...\\n\", os.Args[2])\r\n\tr, err := git.NewRepository(os.Args[2], nil)\r\n\tif err != nil {\r\n\t\tpanic(err)\r\n\t}\r\n\r\n\tif err := r.Pull(\"origin\", \"refs/heads/master\"); err != nil {\r\n\t\tpanic(err)\r\n\t}\r\n\r\n\tdumpCommits(r)\r\n}\r\n\r\nfunc dumpCommits(r *git.Repository) {\r\n\titer := r.Commits()\r\n\tdefer iter.Close()\r\n\r\n\tfor {\r\n\t\tcommit, err := iter.Next()\r\n\t\tif err != nil {\r\n\t\t\tif err == io.EOF {\r\n\t\t\t\tbreak\r\n\t\t\t}\r\n\r\n\t\t\tpanic(err)\r\n\t\t}\r\n\r\n\t\tfmt.Println(commit)\r\n\t}\r\n}\r\n")),
+		base64.StdEncoding.EncodeToString([]byte("package main\r\n\r\nimport (\r\n\t\"fmt\"\r\n\t\"io\"\r\n\t\"os\"\r\n\r\n\t\"github.com/dink10/go-git.v3\"\r\n)\r\n\r\nfunc main() {\r\n\tfmt.Printf(\"Retrieving %q ...\\n\", os.Args[2])\r\n\tr, err := git.NewRepository(os.Args[2], nil)\r\n\tif err != nil {\r\n\t\tpanic(err)\r\n\t}\r\n\r\n\tif err := r.Pull(\"origin\", \"refs/heads/master\"); err != nil {\r\n\t\tpanic(err)\r\n\t}\r\n\r\n\tdumpCommits(r)\r\n}\r\n\r\nfunc dumpCommits(r *git.Repository) {\r\n\titer := r.Commits()\r\n\tdefer iter.Close()\r\n\r\n\tfor {\r\n\t\tcommit, err := iter.Next()\r\n\t\tif err != nil {\r\n\t\t\tif err == io.EOF {\r\n\t\t\t\tbreak\r\n\t\t\t}\r\n\r\n\t\t\tpanic(err)\r\n\t\t}\r\n\r\n\t\tfmt.Println(commit)\r\n\t}\r\n}\r\n")),
 		"eAGNUU1LAzEU9JpC/0NcEFJps2ARQdmDFD3W0qt6SHez8dHdZH1JqyL+d/Oy/aDgQVh47LzJTGayatyKX99MzzpVrpXRvFVgh4PhANrOYeBiOGBZ3YaMJrg0nI+D/o3r1kaCzT2Wkyo3bmIgyO00rkfEqDe2TIJixL/jgagjFwg21CJb6oCgt2ANv3jnUsoXm4258/IejX++eo0CDMdcI/LbgpPuXH8sdec8BIdf4sgccwsN0aFO9POCgGTIOmWhFFGE9j/p1jtWFEW52DSNyByCAXLPUNc+f9Oq8nmrfNCYje7+o1lt2m7m2haCF2SVnFL6kw2/pBzHEH0rEH0oI8q9BF220nWEaSdnjfNaRDDCtcM+WZnsDgUl4lx/BuKxv6rYY0XBwcmHp8deh7EVarWmQ7uC2Glre/TweI0VvTk5xaTx+wWX66Gs",
 	},
 	{

@@ -7,9 +7,9 @@ import (
 	"os/user"
 	"strings"
 
-	"gopkg.in/src-d/go-billy.v4"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/config"
-	gioutil "gopkg.in/src-d/go-git.v4/utils/ioutil"
+	"github.com/dink10/go-billy.v4"
+	"github.com/dink10/go-git.v4/plumbing/format/config"
+	gioutil "github.com/dink10/go-git.v4/utils/ioutil"
 )
 
 const (

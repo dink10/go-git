@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"gopkg.in/src-d/go-git.v4/utils/merkletrie"
+	"github.com/dink10/go-git.v4/utils/merkletrie"
 )
 
 // Change values represent a detected change between two git trees.  For

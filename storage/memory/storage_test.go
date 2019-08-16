@@ -3,8 +3,8 @@ package memory
 import (
 	"testing"
 
+	"github.com/dink10/go-git.v4/storage/test"
 	. "gopkg.in/check.v1"
-	"gopkg.in/src-d/go-git.v4/storage/test"
 )
 
 func Test(t *testing.T) { TestingT(t) }

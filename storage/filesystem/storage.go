@@ -2,10 +2,10 @@
 package filesystem
 
 import (
-	"gopkg.in/src-d/go-git.v4/plumbing/cache"
-	"gopkg.in/src-d/go-git.v4/storage/filesystem/dotgit"
+	"github.com/dink10/go-git.v4/plumbing/cache"
+	"github.com/dink10/go-git.v4/storage/filesystem/dotgit"
 
-	"gopkg.in/src-d/go-billy.v4"
+	"github.com/dink10/go-billy.v4"
 )
 
 // Storage is an implementation of git.Storer that stores data on disk in the

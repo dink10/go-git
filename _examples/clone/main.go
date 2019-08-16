@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"gopkg.in/src-d/go-git.v4"
-	. "gopkg.in/src-d/go-git.v4/_examples"
+	"github.com/dink10/go-git.v4"
+	. "github.com/dink10/go-git.v4/_examples"
 )
 
 // Basic example of how to clone a repository using clone options.

@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"gopkg.in/src-d/go-git.v4"
-	. "gopkg.in/src-d/go-git.v4/_examples"
+	"github.com/dink10/go-git.v4"
+	. "github.com/dink10/go-git.v4/_examples"
 )
 
 // Example of how to open a repository in a specific path, and push to

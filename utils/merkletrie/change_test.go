@@ -1,9 +1,9 @@
 package merkletrie_test
 
 import (
-	"gopkg.in/src-d/go-git.v4/utils/merkletrie"
-	"gopkg.in/src-d/go-git.v4/utils/merkletrie/internal/fsnoder"
-	"gopkg.in/src-d/go-git.v4/utils/merkletrie/noder"
+	"github.com/dink10/go-git.v4/utils/merkletrie"
+	"github.com/dink10/go-git.v4/utils/merkletrie/internal/fsnoder"
+	"github.com/dink10/go-git.v4/utils/merkletrie/noder"
 
 	. "gopkg.in/check.v1"
 )

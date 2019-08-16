@@ -7,11 +7,11 @@ import (
 	"os"
 	"time"
 
-	"gopkg.in/src-d/go-git.v4"
-	. "gopkg.in/src-d/go-git.v4/_examples"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport/client"
-	githttp "gopkg.in/src-d/go-git.v4/plumbing/transport/http"
-	"gopkg.in/src-d/go-git.v4/storage/memory"
+	"github.com/dink10/go-git.v4"
+	. "github.com/dink10/go-git.v4/_examples"
+	"github.com/dink10/go-git.v4/plumbing/transport/client"
+	githttp "github.com/dink10/go-git.v4/plumbing/transport/http"
+	"github.com/dink10/go-git.v4/storage/memory"
 )
 
 // Here is an example to configure http client according to our own needs.

@@ -1,6 +1,6 @@
 package storer
 
-import "gopkg.in/src-d/go-git.v4/plumbing/format/index"
+import "github.com/dink10/go-git.v4/plumbing/format/index"
 
 // IndexStorer generic storage of index.Index
 type IndexStorer interface {
