@@ -147,15 +147,19 @@ func (w *Worktree) Checkout(opts *CheckoutOptions) error {
 		return err
 	}
 
+	c, err := w.getCommitFromCheckoutOptions(opts)
+	if err == plumbing.ErrReferenceNotFound {
+		h := plumbing.NewSymbolicReference(plumbing.HEAD, opts.Branch)
+		if err := w.r.Storer.SetReference(h); err != nil {
+			return err
+		}
+		return nil
+	}
+
 	if opts.Create {
 		if err := w.createBranch(opts); err != nil {
 			return err
 		}
-	}
-
-	c, err := w.getCommitFromCheckoutOptions(opts)
-	if err != nil {
-		return err
 	}
 
 	ro := &ResetOptions{Commit: c, Mode: MergeReset}
