@@ -347,22 +347,12 @@ func PlainClone(path string, isBare bool, o *CloneOptions) (*Repository, error) 
 // TODO(mcuadros): move isBare to CloneOptions in v5
 // TODO(smola): refuse upfront to clone on a non-empty directory in v5, see #1027
 func PlainCloneContext(ctx context.Context, path string, isBare bool, o *CloneOptions) (*Repository, error) {
-	cleanup, cleanupParent, err := checkIfCleanupIsNeeded(path)
-	if err != nil {
-		return nil, err
-	}
-
 	r, err := PlainInit(path, isBare)
 	if err != nil {
 		return nil, err
 	}
 
 	err = r.clone(ctx, o)
-	if err != nil && err != ErrRepositoryAlreadyExists {
-		if cleanup {
-			cleanUpDir(path, cleanupParent)
-		}
-	}
 
 	return r, err
 }
