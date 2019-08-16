@@ -5,7 +5,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"io"
 	stdioutil "io/ioutil"
 	"os"
 	"path"
@@ -14,6 +13,7 @@ import (
 	"time"
 
 	"golang.org/x/crypto/openpgp"
+
 	"gopkg.in/src-d/go-git.v4/config"
 	"gopkg.in/src-d/go-git.v4/internal/revision"
 	"gopkg.in/src-d/go-git.v4/plumbing"
@@ -363,65 +363,6 @@ func newRepository(s storage.Storer, worktree billy.Filesystem) *Repository {
 		wt:     worktree,
 		r:      make(map[string]*Remote),
 	}
-}
-
-func checkIfCleanupIsNeeded(path string) (cleanup bool, cleanParent bool, err error) {
-	fi, err := os.Stat(path)
-	if err != nil {
-		if os.IsNotExist(err) {
-			return true, true, nil
-		}
-
-		return false, false, err
-	}
-
-	if !fi.IsDir() {
-		return false, false, fmt.Errorf("path is not a directory: %s", path)
-	}
-
-	f, err := os.Open(path)
-	if err != nil {
-		return false, false, err
-	}
-
-	defer ioutil.CheckClose(f, &err)
-
-	_, err = f.Readdirnames(1)
-	if err == io.EOF {
-		return true, false, nil
-	}
-
-	if err != nil {
-		return false, false, err
-	}
-
-	return false, false, nil
-}
-
-func cleanUpDir(path string, all bool) error {
-	if all {
-		return os.RemoveAll(path)
-	}
-
-	f, err := os.Open(path)
-	if err != nil {
-		return err
-	}
-
-	defer ioutil.CheckClose(f, &err)
-
-	names, err := f.Readdirnames(-1)
-	if err != nil {
-		return err
-	}
-
-	for _, name := range names {
-		if err := os.RemoveAll(filepath.Join(path, name)); err != nil {
-			return err
-		}
-	}
-
-	return err
 }
 
 // Config return the repository config
